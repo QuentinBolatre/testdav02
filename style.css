@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+.banner {
+    width: 1584px;
+    height: 396px;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 50%, #f5f7ff 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+}
+
+/* Left gradient decoration - vertical stripes */
+.gradient-decoration {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(90, 130, 255, 0.6) 0%,
+        rgba(100, 150, 255, 0.4) 30%,
+        rgba(140, 180, 255, 0.2) 60%,
+        rgba(180, 200, 255, 0.05) 85%,
+        transparent 100%
+    );
+}
+
+.gradient-decoration {
+    --gradient: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIHNsaWNlIiB2aWV3Qm94PSIwIDAgOTAzIDExMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTS0zNyAxMTEuNzEyVjBoOTM5Ljc2M3YxMTEuNzEyeiIgb3BhY2l0eT0iLjUyIi8+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJhIiBjeD0iMCIgY3k9IjAiIHI9IjEiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoLTc5Ni4yNTUzIDExOC40NjEzMSAtNTguOTcxODkgLTM5Ni4zODgzIDM3OC40MDMgLTIwLjA4NCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZmIi8+PHN0b3Agb2Zmc2V0PSIuNTA1IiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48L3N2Zz4=);
+    z-index: 0;
+}
+
+.gradient-decoration::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+    background-size: 25% 100%, 20% 100%, 15% 100%, 10% 100%;
+    background-image: var(--gradient), var(--gradient), var(--gradient), var(--gradient);
+    background-repeat: no-repeat;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    left: 60px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #1a1a2e;
+}
+
+/* Content */
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+/* Google Rating */
+.google-rating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: -12px;
+    object-fit: cover;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}
+
+.rating-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+    color: #555;
+}
+
+.rating-score {
+    font-weight: 600;
+    color: #333;
+}
+
+.rating-star {
+    color: #fbbc04;
+}
+
+.rating-text {
+    color: #666;
+}
+
+/* Tagline */
+.tagline {
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+    color: #1a1a2e;
+    line-height: 1.4;
+    margin-bottom: 35px;
+}
+
+.highlight-blue {
+    background: linear-gradient(135deg, #4a7cff 0%, #6b8cff 100%);
+    color: white;
+    padding: 4px 14px;
+    border-radius: 6px;
+}
+
+.highlight-dark {
+    background: #1a1a2e;
+    color: white;
+    padding: 4px 14px;
+    border-radius: 6px;
+}
+
+/* Client Logos */
+.client-logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    opacity: 0.7;
+}
+
+.client-logo {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.client-logo.airfrance {
+    font-weight: 600;
+}
+
+.client-logo .slash {
+    color: #e21a1a;
+}
+
+.client-logo.tf1 {
+    font-weight: 700;
+    background: linear-gradient(135deg, #1a1a2e, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.client-logo.francetv {
+    font-weight: 500;
+}
+
+.client-logo .dot {
+    color: #0066cc;
+}
+
+.client-logo.total {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.client-logo .cm-icon {
+    color: #0066aa;
+}
+
+.client-logo.roger {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
